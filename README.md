@@ -12,8 +12,10 @@ A task app using react that can fetch data from the server and display a respons
 * Feel free to add additional feature(s) as you please but the previous ones must work as expected.
 
 
-<img align="right" alt="GIF" src="public/img/screem01.gif" height="320" />
-<img align="right" alt="GIF" src="public/img/screem02.gif" height="320" />
+<img align="right" alt="GIF" src="public/img/screem01.gif" />
+
+
+<img align="right" alt="GIF" src="public/img/screem02.gif" />
 
 
 # Getting Started with Create React App
