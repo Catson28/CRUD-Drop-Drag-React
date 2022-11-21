@@ -15,13 +15,13 @@ A task app using react that can fetch data from the server and display a respons
 add task
 
 <div align="center">
-    <img align="right" alt="GIF" src="public/img/screem01.gif" /> 
+    <img alt="GIF" src="public/img/screem01.gif" /> 
 </div>
 
 move task
 
 <div align="center">
-    <img align="right" alt="GIF" src="public/img/screem02.gif" /> 
+    <img alt="GIF" src="public/img/screem02.gif" /> 
 </div>
 
 
