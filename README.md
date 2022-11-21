@@ -12,19 +12,19 @@ A task app using react that can fetch data from the server and display a respons
 * Feel free to add additional feature(s) as you please but the previous ones must work as expected.
 <br>
 
+add task
 
 <div align="center">
     <img align="right" alt="GIF" src="public/img/screem01.gif" /> 
 </div>
+
+move task
+
 <div align="center">
     <img align="right" alt="GIF" src="public/img/screem02.gif" /> 
 </div>
 
 
-
-
-<hr>
-<br>
 
 # Getting Started with Create React App
 
