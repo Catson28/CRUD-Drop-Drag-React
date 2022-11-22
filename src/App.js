@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
+import ModalAdd from "./components/modalAdd";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { v4 as uuidv4 } from "uuid";
 import { useData } from "./providers/data";
 // css do modal 
 import "./App.css";
-
-
 
 const onDragEnd = (result, task, setTask) => {
   if (!result.destination) return;
@@ -49,15 +47,9 @@ const onDragEnd = (result, task, setTask) => {
   }
 };
 
-
 function App() {
   const {task, setTask} = useData();
-  const [title, setTitle] = useState('');
-  const [descripition, setDescripition] = useState('');
 
-
-
-  // const [task, setTask] = useState(taskFromBackend);
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
@@ -78,73 +70,9 @@ function App() {
     closeModal();
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (!title.trim() && !descripition.trim()) {
-      return;
-    }
-    addTask(title, descripition, task);
-    setTitle("");
-    setDescripition("");
-
-    // setIsOpen(false);
-  }
-
-
-  function handleTitleChange(e) {
-    setTitle(e.target.value);
-  }
-
-  function handleDescripitionChange(e) {
-    setDescripition(e.target.value);
-  }
-
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
-
-
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-        overlayClassName="modal-overlay"
-        className="modal-content"
-      >
-        <h2>New Task</h2>
-        <br />
-        <div>
-          <form onSubmit={handleSubmit}>
-            <label for="title">Title</label><br/>
-
-            <input
-              type="text"
-              id="new-todo-input"
-              className="input"
-              name="title"
-              autoComplete="off"
-              value={title}
-              onChange={handleTitleChange}
-            />
-            <label for="descripition">Descripition</label><br/>
-
-            <textarea
-              type="text"
-              id="new-todo-input"
-              className="textarea"
-              name="descripition"
-              autoComplete="off"
-              value={descripition}
-              onChange={handleDescripitionChange}
-            ></textarea>
-
-            <button type="submit" className="btn btn__primary btn__lg">
-              Add Task
-            </button>
-          </form>
-        </div>
-
-        <button className="danger" onClick={closeModal}>Close</button>
-      </Modal>
+      <ModalAdd addTask={addTask} modalIsOpen={modalIsOpen} closeModal={closeModal}/>
 
       <DragDropContext
         onDragEnd={result => onDragEnd(result, task, setTask)}
@@ -178,11 +106,11 @@ function App() {
                           minHeight: 500
                         }}
                       >
-                              {
-                                column.button!=null
-                                ? <button className="addTask" onClick={openModal} >{ column.button }</button> 
-                                :null
-                              }
+                            {
+                              column.button!=null
+                              ? <button className="addTask" onClick={openModal} >{ column.button }</button> 
+                              :null
+                            }
                                   
                       
                         {column.items.map((item, index) => {
