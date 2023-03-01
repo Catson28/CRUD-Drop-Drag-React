@@ -1,4 +1,4 @@
-# Internship project
+# CRUD react
 
 A task app using react that can fetch data from the server and display a response in the UI.
 
