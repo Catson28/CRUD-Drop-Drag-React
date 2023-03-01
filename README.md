@@ -2,6 +2,20 @@
 
 A task app using react that can fetch data from the server and display a response in the UI.
 
+# Meu Projeto
+
+## Autor
+
+**Name:** Feliciano Candieiro
+
+**Email:** catson@outlook.pt
+
+**Website:** https://candieiro-2022.netlify.app/
+
+**Social Midias:** 
+- Twitter: @CandClips
+- LinkedIn: linkedin.com/in/candsoft
+
 **Required Features :**
 * API response contains a list/array of tasks.
 * A single task can have a title, a description and 1 of the 3 states (todo, in-progress, done)
