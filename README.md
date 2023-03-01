@@ -2,8 +2,6 @@
 
 A task app using react that can fetch data from the server and display a response in the UI.
 
-# Meu Projeto
-
 ## Autor
 
 **Name:** Feliciano Candieiro
@@ -15,6 +13,8 @@ A task app using react that can fetch data from the server and display a respons
 **Social Midias:** 
 - Twitter: @CandClips
 - LinkedIn: linkedin.com/in/candsoft
+
+#
 
 **Required Features :**
 * API response contains a list/array of tasks.
